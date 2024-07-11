@@ -19,7 +19,14 @@ repositories {
 }
 
 dependencies {
+//	buscamos en maven spring boot data JPA
+//	en griddle tomamos 'group:name'
+//	no importa la version porque automaticamente graddle las descarga
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	runtimeOnly 'org.postgresql:postgresql'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
