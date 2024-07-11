@@ -1,6 +1,9 @@
 package com.market.Ecomerce_Market.Persistence.Entity;
 
 import jakarta.persistence.*;
+import jdk.dynalink.linker.LinkerServices;
+
+import java.util.List;
 
 @Entity
 @Table(name = "categorias")
@@ -14,6 +17,9 @@ public class Categoria {
     private String descripcion;
 
     private Boolean estado;
+
+    @OneToMany(mappedBy = "categoria")
+    private List<Producto> productos;
 
     public Integer getIdCategoria() {
         return idCategoria;
