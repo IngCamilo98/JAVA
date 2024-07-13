@@ -46,10 +46,6 @@ public class ProductoRepository implements ProductRepository {
         return mapper.toProduct(productoCrudRepository.save(producto));
     }
 
-    public Producto save(Producto producto){
-        return
-    }
-
     @Override
     public void delete(int productId){
         productoCrudRepository.deleteById(productId);
