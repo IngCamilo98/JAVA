@@ -5,6 +5,7 @@ import com.market.Ecomerce_Market.Domain.Repository.ProductRepository;
 import com.market.Ecomerce_Market.Persistence.CRUD.ProductoCrudRepository;
 import com.market.Ecomerce_Market.Persistence.Entity.Producto;
 import com.market.Ecomerce_Market.Persistence.Mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collections;
@@ -14,7 +15,10 @@ import java.util.Optional;
 @Repository
 public class ProductoRepository implements ProductRepository {
 
+//    Tiene que ser de tipo Spring
+    @Autowired
     private ProductoCrudRepository productoCrudRepository;
+    @Autowired
     private ProductMapper mapper;
 
     @Override
